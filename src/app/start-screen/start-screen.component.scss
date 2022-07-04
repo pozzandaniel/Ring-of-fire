@@ -1,0 +1,44 @@
+.start-screen {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        object-position: bottom;
+        z-index: 1;
+    }
+
+    .title-box {
+        z-index: 2;
+        border: 1px solid  rgba(255, 255, 0, 1);;
+        position: absolute;
+        padding: 50px;
+        background-color: rgba(9, 121, 105, 0.6);
+        box-shadow: 2px 0 16px 3px rgba(255, 255, 0, 0.3);
+        
+        h1 {
+            font-family: 'Berkshire Swash';
+            color: 	rgb(255,215,0);
+            font-size: 64px;
+            line-height: 20px;
+            background-color: rgba(154, 42, 42, 0.6);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin:0;
+           
+        }
+    }
+
+
+}
