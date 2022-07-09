@@ -1,7 +1,12 @@
 <div class="start-screen">
-    <div class="title-box">
+    <div @fadeInTop class="title-box">
 
-        <h1>RING of FIRE</h1>
+        <h1 >RING of FIRE</h1>
+
+     
     </div>
-    <img src="./assets/img/ringoffirebg.png" alt="">
+    <h2 (click)="newGame()" @fadeInBottom (mouseenter)="toggle()" (mouseleave)="toggle()" [@drawBorder]="isHovered ? 'border' : 'no-border'">START NEW GAME</h2>
+    <img  src="./assets/img/ringoffirebg.png" alt="">
+
+
 </div>
