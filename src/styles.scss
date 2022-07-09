@@ -18,3 +18,5 @@ body {
          url('./assets/fonts/berkshire-swash-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('./assets/fonts/berkshire-swash-v16-latin-regular.svg#BerkshireSwash') format('svg'); /* Legacy iOS */
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
