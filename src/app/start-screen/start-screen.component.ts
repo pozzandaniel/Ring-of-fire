@@ -18,14 +18,14 @@ import { R3TargetBinder } from '@angular/compiler';
     trigger('fadeInTop', [
       transition(':enter', [
        style({opacity: 0, transform: 'translateY(-100%)'}),
-       animate('1s 1s ease-in', style({opacity:1, transform: 'translateY(0)'}))
+       animate('0.5s ease-in', style({opacity:1, transform: 'translateY(0)'}))
       ])
     ]),
 
     trigger('fadeInBottom', [
       transition(':enter', [
         style({opacity:0, transform: 'translateY(100%)'}),
-        animate('1s 3s ease-in', style({opacity:1, transform: 'translateY(0)'}))
+        animate('0.5s 1s ease-in', style({opacity:1, transform: 'translateY(0)'}))
       ])
     ]),
 
