@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 
 @Component({
@@ -8,12 +9,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DialogAddPlayerComponent implements OnInit {
   name: string = '';
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<DialogAddPlayerComponent>,
+    ) { }
 
   ngOnInit(): void {
   }
 
   onNoClick(){
-    
+    this.dialogRef.close();
   }
 }
