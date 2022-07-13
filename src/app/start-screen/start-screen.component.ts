@@ -11,6 +11,9 @@ import {
   stagger
 } from '@angular/animations';
 import { R3TargetBinder } from '@angular/compiler';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Game } from 'src/models/game';
+import { GameInfoComponent } from '../game-info/game-info.component';
 
 @Component({
   selector: 'app-start-screen',
@@ -55,13 +58,21 @@ import { R3TargetBinder } from '@angular/compiler';
 })
 export class StartScreenComponent implements OnInit {
   isHovered = false;
-  constructor(private router: Router) { }
+  constructor(private firestore: AngularFirestore, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   newGame(){
-    this.router.navigateByUrl('/game');
+    
+    let game = new Game();
+    this.firestore
+    .collection('games')
+    .add(game.toJson())
+    .then((gameInfo: any)=>{
+      console.log(gameInfo);
+      this.router.navigateByUrl('/game/' + gameInfo.id);
+    })
   }
 
   toggle(){

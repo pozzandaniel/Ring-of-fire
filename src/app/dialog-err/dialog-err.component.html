@@ -1,0 +1,11 @@
+<div class="container">
+    <div *ngIf="!data.gameOver" class="message-select-player">
+        <p>You must select at least one player before you start a new game.<br> Click the icon on the bottom right corner.</p>
+    </div>
+    <div *ngIf="data.gameOver" class="message-restart-game">
+        <p mat-dialog-title>It seems you run out of cards.</p>
+        <img src="/assets/img/sadPenguin.png" alt="">
+        <button color="primary" mat-button [mat-dialog-close]="true" routerLink="/">Restart game</button>
+    </div>
+    
+</div>

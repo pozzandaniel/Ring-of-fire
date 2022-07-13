@@ -1,0 +1,77 @@
+
+.playerImg-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width:500px){
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    img {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+        border: 4px solid transparent;
+
+        &:hover{
+            filter: brightness(1.25);
+            animation: drawBorder 3s ease-in-out;
+            border: 4px solid rgb(85, 10, 40);
+        }
+       
+    }
+
+}
+
+.change-name-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    @media(max-width:400px){
+        flex-direction: column;
+    }
+    .change-name{
+        outline: none;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        padding: 5px;
+        color: white;
+    }
+
+    button{
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.container{
+    @media(max-width: 500px){
+        height: 100vh;
+       
+    }
+
+    h2{
+        @media(max-width: 500px){
+            text-align: center;
+        }
+    }
+
+    .mat-dialog-actions{
+        @media(max-width: 500px){
+            flex-direction: column;
+            gap: 30px;
+        }
+        }
+}

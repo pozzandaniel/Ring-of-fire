@@ -1,0 +1,20 @@
+<!-- <p >edit-player works! {{ data.playerId }}</p> -->
+
+<div class="container">
+
+    <h2 mat-dialog-title>Edit your player</h2>
+    <div class="playerImg-container">
+        <img [mat-dialog-close]="image" *ngFor="let image of images; let i = index;" src="/assets/img/users/{{ image }}" alt="">
+    
+    </div>
+    
+    <div mat-dialog-actions>
+        <button mat-button (click)="dialogRef.close()">Close</button>
+        <button mat-button color="warn" [mat-dialog-close]="'DELETE'" cdkFocusInitial>Delete player</button>
+        <button mat-button color="accent" (click)="showInput()" cdkFocusInitial>Change name</button>
+        <div *ngIf="inputVisible" class="change-name-container">
+            <input [(ngModel)]="newName" class="change-name"  type="text">
+            <button  [mat-dialog-close]="newName" mat-fab color="primary" class="btn-add"><mat-icon>add</mat-icon></button>
+        </div>
+    </div>
+</div>
