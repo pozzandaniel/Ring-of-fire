@@ -55,13 +55,14 @@ export class GameComponent implements OnInit {
   }
 
   takeCard(){
-    if(!this.game.pickCardAnimation && this.game.players.length > 0){
+    if(!this.game.pickCardAnimation && this.game.players.length > 0 && this.game.stack.length > 0){
       this.game.currentCard = this.game.stack.pop()
       this.game.pickCardAnimation = true;
       console.log(this.game.currentCard);
       this.game.currentPlayer++;
       this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
-      console.log('current player is: ', this.game.currentPlayer)
+      console.log('current card is: ', this.game.currentCard);
+      console.log('stack is: ', this.game.stack);
       this.saveGame();
       
     } else {
