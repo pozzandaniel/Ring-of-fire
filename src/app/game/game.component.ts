@@ -41,13 +41,14 @@ export class GameComponent implements OnInit {
       .valueChanges()
       .subscribe((game: any)=>{
         console.log('Game updated: ', game);
-        this.game.currentPlayer = game.currentPlayer;
-        this.game.playedCards = game.playedCards;
-        this.game.players = game.players;
-        this.game.playerImages = game.playerImages;
-        this.game.stack = game.stack;
-        this.game.pickCardAnimation = game.pickCardAnimation;
-        this.game.currentCard = game.currentCard;
+          this.game.currentPlayer = game.currentPlayer;
+          this.game.playedCards = game.playedCards;
+          this.game.players = game.players;
+          this.game.playerImages = game.playerImages;
+          this.game.stack = game.stack;
+          this.game.pickCardAnimation = game.pickCardAnimation;
+          this.game.currentCard = game.currentCard;
+        
       });
     })
     
@@ -66,6 +67,7 @@ export class GameComponent implements OnInit {
     } else {
       if(this.game.stack.length != 0 && !this.game.pickCardAnimation){
         this.openDialogErr();
+        console.log('game.currentcard is: ', this.game.currentCard)
 
       } else if(this.game.stack.length == 0 ) {
         this.gameOver = true;

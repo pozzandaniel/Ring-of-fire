@@ -6,6 +6,10 @@ body, html {
     overflow: hidden;
 }
 
+.d-none {
+    display: none !important;
+}
+
 @media (max-width:720px){
     .hide-mobile{
         display: none !important;
