@@ -52,6 +52,7 @@ import { GameInfoComponent } from '../game-info/game-info.component';
         // style({border: '4px solid transparent'})
       ]))),
     ])
+  
   ],
   templateUrl: './start-screen.component.html',
   styleUrls: ['./start-screen.component.scss'],

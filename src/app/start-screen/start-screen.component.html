@@ -5,8 +5,9 @@
 
      
     </div>
-    <h2 (click)="newGame()" @fadeInBottom (mouseenter)="toggle()" (mouseleave)="toggle()" [@drawBorder]="isHovered ? 'border' : 'no-border'">START NEW GAME</h2>
-    <img  src="./assets/img/ringoffirebg.png" alt="">
+    <img class="label-button" src="./assets/img/button.png" (click)="newGame()" @fadeInBottom (mouseenter)="toggle()" (mouseleave)="toggle()" [@drawBorder]="isHovered ? 'border' : 'no-border'">
+    <img class="bgimg"  src="./assets/img/ringoffirebg.png" alt="">
 
 
 </div>
+
